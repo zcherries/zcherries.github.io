@@ -12,6 +12,7 @@ tags: []
 
 Sometimes in JavaScript, we need a way of binding a Function to the correct scope of ‘this’ when applying the Function to a given context. Enter Function.prototype.bind, implemented thus:
 
+```javascript
 Function.prototype.bind = function(context) {
   var fn = this;
   var args = Array.prototype.slice.call(arguments, 1)
@@ -19,6 +20,7 @@ Function.prototype.bind = function(context) {
     return fn.apply(context, args.concat([].slice.call(arguments)));
   };
 };
+```
 
 When using bind, we’re looking to bind a Function to the supplied context. However, the tricky part is, we may have many more additional arguments passed into the original Function, as well as additional arguments that are passed into the functions included as additional arguments. Confused? Let me try to explain.
 

@@ -12,7 +12,7 @@ tags: []
 
 Sometimes in JavaScript, we need a way of binding a Function to the correct scope of ‘this’ when applying the Function to a given context. Enter Function.prototype.bind, implemented thus:
 
-```javascript
+```
 Function.prototype.bind = function(context) {
   var fn = this;
   var args = Array.prototype.slice.call(arguments, 1)

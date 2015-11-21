@@ -7,9 +7,6 @@ tags: []
 ---
 {% include JB/setup %}
 
-#Funcion.prototype.bind in JavaScript Explained
-===============================================
-
 Sometimes in JavaScript, we need a way of binding a Function to the correct scope of ‘this’ when applying the Function to a given context. Enter Function.prototype.bind, implemented thus:
 
 ```
